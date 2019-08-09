@@ -1,0 +1,18 @@
+package com.lvyou.leetcode;
+
+/**
+ * @Author: VernLv
+ * @Data: Create in 20:02 2019/8/9
+ */
+public class LT287 {
+    public int findDuplicate(int[] nums) {
+        for(int i = 0; i < nums.length; i++){
+            if(nums[Math.abs(nums[i])] < 0){
+                return Math.abs(nums[i]);
+            }else{
+                nums[Math.abs(nums[i])] *= -1;
+            }
+        }
+        return -1;
+    }
+}
