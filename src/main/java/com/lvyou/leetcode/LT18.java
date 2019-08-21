@@ -2,9 +2,6 @@ package com.lvyou.leetcode;
 
 import java.util.*;
 
-/**
- * Todo 还没写的记得写
- * */
 public class LT18 {
 
     public List<List<Integer>> fourSum(int[] nums, int target) {
