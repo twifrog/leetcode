@@ -26,12 +26,14 @@ public class Sort {
         int p1 = left, p2 = mid + 1, k = left;
 
         while(p1 <= mid && p2 <= right){
-            if(a[p1] <= a[p2])
+            if(a[p1] <= a[p2]) {
                 tmp[k++] = a[p1++];
-            else
-                tmp[k++] = a[p2++];
-        }
+            }
 
+            else {
+                tmp[k++] = a[p2++];
+            }
+        }
         while(p1 <= mid) {
             tmp[k++] = a[p1++];
         }
@@ -51,7 +53,7 @@ public class Sort {
             return;
         }
         int mid = partition(nums, left, right);
-        quickSort(nums, left, mid);
+        quickSort(nums, left, mid-1);
         quickSort(nums,mid + 1, right);
     }
     public static int partition(int[] nums, int left , int right) {     // 分区操作
@@ -152,9 +154,9 @@ public class Sort {
         }
     }
     public static void main(String[] args) {
-        int[] nums = new int[]{2,3,4,2,5,3,6,7,6,8};
-        insertSort(nums);
+        int[] nums = new int[]{2,3,4,2,5,3,6,7,6,8,2,3,4,2,5,};
 
+        quickSort(nums,0,nums.length-1);
         System.out.println(Arrays.toString(nums));
     }
 }

@@ -24,6 +24,7 @@
     </build>
     <modules>
         <module>order</module>
+        <module>mynetty</module>
     </modules>
     <dependencies>
         <dependency>
